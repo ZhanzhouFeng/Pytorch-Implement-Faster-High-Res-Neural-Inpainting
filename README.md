@@ -26,7 +26,7 @@ This is the python code for [High-Resolution Image Inpainting using Multi-Scale 
 ```Shell
   cd Pytorch-Implement-Faster-High-Res-Neural-Inpainting
   # This will use the trained model to generate the output
-  python run_your_pic.py --content_path "Path of your picture"
+  python run_your_pic.py --content_path "For_test/001101_2.jpg"Path of your picture
   # Because sample models we provided was trained on 6000 pictures from dataset Paris StreetView,
   # We recommend that you use pictures with street views to run the demo.
   # For your convenience, we provide Street pictures not in the training set for you to run the 
