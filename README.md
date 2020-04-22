@@ -11,7 +11,6 @@
 
 ### Examples
 
-![teaser](/overall_result/results/3.jpg  "Sample inpainting results on Paris StreetVeiw images")
 
 ![teaser](/overall_result/results/result1.jpg "Sample inpainting results on Paris StreetVeiw images")
 
