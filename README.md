@@ -4,7 +4,7 @@
  <br>
  <br>
  
-### Version
+## Version
 
 * `python`   		3.6/3.7
 
@@ -15,7 +15,7 @@
  <br>
  <br>
 
-### Examples
+## Examples
 
 
 ![teaser](/overall_result/results/result1.jpg "Sample inpainting results on Paris StreetVeiw images")
@@ -48,6 +48,6 @@ This is the python code for [High-Resolution Image Inpainting using Multi-Scale 
  <br>
 
 
-### Reference
+## Reference
 
 [1]. `Yang, Chao and Lu, Xin and Lin, Zhe and Shechtman, Eli and Wang, Oliver and Li, Hao. High-Resolution Image Inpainting using Multi-ScaleNeural PatchSynthesis[C].//The IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2017`
