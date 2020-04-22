@@ -32,7 +32,7 @@ This is the python code for [High-Resolution Image Inpainting using Multi-Scale 
   # For your convenience, we provide Street pictures not in the training set for you to run the 
   # demo in the folder "For_test"
 ```
-- The results will be in the result fold which including some intermediate results. The final reulst will be named as "result". 
+- The results will be in the  folder "pic_result" which including some intermediate results. The final reulst will be named as "result". 
 
 ### Reference
 
