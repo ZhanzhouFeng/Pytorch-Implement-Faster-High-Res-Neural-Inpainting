@@ -26,10 +26,10 @@ parser.add_argument('--imageSize', type=int, default=128, help='the height / wid
 parser.add_argument('--dataroot', default='G:\Pairs_streetVeiw', help='path to dataset')
 parser.add_argument('--batchSize', type=int, default=2, help='input batch size')
 
-parser.add_argument('--contentNet', default='model/24/contentNet_cifar10.pth',
+parser.add_argument('--contentNet', default='model/contentNet_cifar10.pth',
                     help="path to netG (to continue training)")
 parser.add_argument('--discriNet', default='model/dicriNet_cifar10.pth', help="path to netD (to continue training)")
-parser.add_argument('--content_path1', default='G:\Pairs_streetVeiw\part1/001077_3.jpg')
+parser.add_argument('--content_path',type=str, default='For_test/001101_2.jpg')
 
 parser.add_argument('--overlapPred', type=int, default=4, help='overlapping edges')
 parser.add_argument('--lr', type=float, default=0.0002, help='learning rate, default=0.0002')
@@ -42,18 +42,29 @@ parser.add_argument('--wtl2', type=float, default=0.998, help='0 means do not us
 opt = parser.parse_args()
 print(opt)
 
-pic='G:\Pairs_streetVeiw\part2/001100_0.jpg'
+pic=opt.content_path
 dir='pic_result'
 
-os.mkdir(dir)
+if not os.path.exists(dir):
+    os.mkdir(dir)
 
+#
+#
+# transform = transforms.Compose([transforms.Scale(opt.imageSize),
+#                                 transforms.CenterCrop(opt.imageSize),
+#                                 transforms.ToTensor(),
+#                                 transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
+# transform1 = transforms.Compose([transforms.Scale(opt.imageSize_raw),
+#                                  transforms.CenterCrop(opt.imageSize_raw),
+#                                  transforms.ToTensor(),
+#                                  transforms.Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225))])
 
 transform = transforms.Compose([transforms.Scale(opt.imageSize),
-                                transforms.CenterCrop(opt.imageSize),
+
                                 transforms.ToTensor(),
                                 transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
 transform1 = transforms.Compose([transforms.Scale(opt.imageSize_raw),
-                                 transforms.CenterCrop(opt.imageSize_raw),
+
                                  transforms.ToTensor(),
                                  transforms.Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225))])
 
