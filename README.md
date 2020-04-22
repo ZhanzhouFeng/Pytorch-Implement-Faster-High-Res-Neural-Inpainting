@@ -9,10 +9,12 @@
 * `torchvision`        0.3.0  
 * `opencv-python`    4.2.0.32
 
-###Example
+### Example
 
-![teaser](/overall_result/results/3.jpg "Sample inpainting results on Paris StreetVeiw images")
+![teaser](/overall_result/results/3.jpg /overall_result/results/result1.jpg "Sample inpainting results on Paris StreetVeiw images")
+
 ![teaser](/overall_result/results/result1.jpg "Sample inpainting results on Paris StreetVeiw images")
+
 ![teaser](/overall_result/results/5.jpg "Sample inpainting results on Paris StreetVeiw images")
 
 ### Reference
