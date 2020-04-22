@@ -29,8 +29,8 @@ This is the python code for [High-Resolution Image Inpainting using Multi-Scale 
   python run_your_pic.py --content_path "Path of your picture"
   # Because sample models we provided was trained on 6000 pictures from dataset Paris StreetView,
   # We recommend that you use pictures with street views to run the demo.
-  # For your convenience, we provide Street pictures not in the 
-  # training set for you to run the demo in the folder "For_test"
+  # For your convenience, we provide Street pictures not in the training set for you to run the 
+  # demo in the folder "For_test"
 ```
 - The results will be in the result fold which including some intermediate results. The final reulst will be named as "result". 
 
