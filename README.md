@@ -26,8 +26,9 @@ This is the python code for [High-Resolution Image Inpainting using Multi-Scale 
 ```Shell
   cd Pytorch-Implement-Faster-High-Res-Neural-Inpainting
   # This will use the trained model to generate the output
-  python 
+  python run_your_pic.py --content_path "Path of your picture"
 ```
+- The results will be in the result fold which including some intermediate results. The final reulst will be named as "result". 
 
 ### Reference
 
