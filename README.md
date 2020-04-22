@@ -22,6 +22,12 @@ This is the python code for [High-Resolution Image Inpainting using Multi-Scale 
 
 - Download the [pre-trained models](https://drive.google.com/open?id=0BxYj-YwDqh45XzZVTXF1dnJXY28) for the content and texture networks and put them under the folder model/.
 
+- Run the Demo
+```Shell
+  cd Pytorch-Implement-Faster-High-Res-Neural-Inpainting
+  # This will use the trained model to generate the output
+  python 
+```
 
 ### Reference
 
