@@ -28,15 +28,13 @@ def main(config, cropped, synthesis_in, dir):
     # synthesis is 64*64
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     print(device)
-    "-------------------transform and denorm transform-----------------"
+    "transform and denorm transform"
     # VGGNet was trained on ImageNet where images are normalized by mean=[0.485, 0.456, 0.406]
     # and std=[0.229, 0.224, 0.225].
     transform = transforms.Compose([
         transforms.ToTensor(),
         transforms.Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225))])
     denorm_transform = transforms.Normalize(mean=(-2.12, -2.04, -1.80), std=(4.37, 4.46, 4.44))
-
-    "--------------read image------------------"
 
     "resize image in several level for training"
     size = 256
@@ -58,7 +56,7 @@ def main(config, cropped, synthesis_in, dir):
         pyramid_content_image.append(synthesis_in_sub)
 
     # return pyramid_content_image[2]
-    "-----------------start training-------"
+    "start training"
     global iter
     iter = 0
 
@@ -98,19 +96,19 @@ def main(config, cropped, synthesis_in, dir):
             loss.backward(retain_graph=True)
             # print loss
             if (iter + 1) % 10 == 0:
-                print('res-%d-iteration-%d: %f' % (i + 1, iter + 1, loss.item()))
+                print('res_%d_iteration_%d: %f' % (i + 1, iter + 1, loss.item()))
             # save image
             if (iter + 1) % config.sample_step == 0 or iter + 1 == config.max_iter:
                 image = get_synthesis_image(synthesis, denorm_transform, device)
                 image = F.interpolate(image.unsqueeze(0), size=pyramid_content_image[i].shape[2:4], mode='bilinear')
-                torchvision.utils.save_image(image.squeeze(), dir + '/res-%d-result-%d.jpg' % (i + 1, iter + 1))
-                print('save image: res-%d-result-%d.jpg' % (i + 1, iter + 1))
+                torchvision.utils.save_image(image.squeeze(), dir + '/res_%d_result_%d.jpg' % (i + 1, iter + 1))
+                print('save image: res_%d_result_%d.jpg' % (i + 1, iter + 1))
             iter += 1
             if iter == config.max_iter:
                 iter = 0
             return loss
 
-        "----------------------"
+        "------------"
         optimizer.step(closure)
 
     image = get_synthesis_image(synthesis, denorm_transform, device)

@@ -48,25 +48,24 @@ dir='pic_result'
 if not os.path.exists(dir):
     os.mkdir(dir)
 
-#
-#
-# transform = transforms.Compose([transforms.Scale(opt.imageSize),
-#                                 transforms.CenterCrop(opt.imageSize),
-#                                 transforms.ToTensor(),
-#                                 transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
-# transform1 = transforms.Compose([transforms.Scale(opt.imageSize_raw),
-#                                  transforms.CenterCrop(opt.imageSize_raw),
-#                                  transforms.ToTensor(),
-#                                  transforms.Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225))])
-
+#cut edge
 transform = transforms.Compose([transforms.Scale(opt.imageSize),
-
+                                transforms.CenterCrop(opt.imageSize),
                                 transforms.ToTensor(),
                                 transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
 transform1 = transforms.Compose([transforms.Scale(opt.imageSize_raw),
-
+                                 transforms.CenterCrop(opt.imageSize_raw),
                                  transforms.ToTensor(),
                                  transforms.Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225))])
+#keep edge
+# transform = transforms.Compose([transforms.Scale((opt.imageSize,opt.imageSize)),
+#
+#                                 transforms.ToTensor(),
+#                                 transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
+# transform1 = transforms.Compose([transforms.Scale((opt.imageSize_raw,opt.imageSize_raw)),
+#
+#                                  transforms.ToTensor(),
+#                                  transforms.Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225))])
 
 denorm_transform = transforms.Normalize(mean=(-1, -1, -1), std=(2, 2, 2))
 denorm_transform1 = transforms.Normalize(mean=(-2.12, -2.04, -1.80), std=(4.37, 4.46, 4.44))
