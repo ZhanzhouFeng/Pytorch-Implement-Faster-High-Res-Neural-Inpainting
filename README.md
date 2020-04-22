@@ -18,6 +18,7 @@
 
 This is the python code for [High-Resolution Image Inpainting using Multi-Scale Neural Patch Synthesis](https://arxiv.org/pdf/1611.09969). The code is adapted from  [Faster-High-Res-Neural-Inpainting](https://github.com/leehomyc/Faster-High-Res-Neural-Inpainting/). Given an image, we use the content and texture network to jointly infer the missing region.
 
+
 ### Demo
 
 - Download the [pre-trained models](https://drive.google.com/open?id=1dfuXksrWNmfO5097s4i3AFTFLGGjREzI) (trained on 6000 pictures from Paris StreetView for 25 epoches) for the content and texture networks and put them under the folder model/.
@@ -33,6 +34,7 @@ This is the python code for [High-Resolution Image Inpainting using Multi-Scale 
   # demo in the folder "For_test"
 ```
 - The results will be in the  folder "pic_result" which including some intermediate results. The final reulst will be named as "result". 
+
 
 ### Reference
 
