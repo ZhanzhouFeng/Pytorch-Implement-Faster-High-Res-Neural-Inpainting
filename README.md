@@ -20,7 +20,7 @@ This is the python code for [High-Resolution Image Inpainting using Multi-Scale 
 
 ### Demo
 
-- Download the [pre-trained models](https://drive.google.com/open?id=0BxYj-YwDqh45XzZVTXF1dnJXY28) (trained on 6000 pictures from Paris StreetView for 25 epoches) for the content and texture networks and put them under the folder model/.
+- Download the [pre-trained models](https://drive.google.com/open?id=1dfuXksrWNmfO5097s4i3AFTFLGGjREzI) (trained on 6000 pictures from Paris StreetView for 25 epoches) for the content and texture networks and put them under the folder model/.
 
 - Run the Demo
 ```Shell
