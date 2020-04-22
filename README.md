@@ -2,7 +2,8 @@
  This is a Pytorch implementation for paper "High-Resolution Image Inpainting using Multi-Scale Neural Patch Synthesis"
  
  
- 
+ <br>
+ <br>
 ### Version
 
 * `python`   		3.6/3.7
@@ -11,7 +12,8 @@
 * `torchvision`        0.3.0  
 * `opencv-python`    4.2.0.32
 
-
+ <br>
+ <br>
 
 ### Examples
 
@@ -23,7 +25,8 @@
 This is the python code for [High-Resolution Image Inpainting using Multi-Scale Neural Patch Synthesis](https://arxiv.org/pdf/1611.09969). The code is adapted from  [Faster-High-Res-Neural-Inpainting](https://github.com/leehomyc/Faster-High-Res-Neural-Inpainting/). Given an image, we use the content and texture network to jointly infer the missing region.
 
 
-
+ <br>
+ <br>
 
 ### Demo
 
@@ -41,7 +44,8 @@ This is the python code for [High-Resolution Image Inpainting using Multi-Scale 
 ```
 - The results will be in the  folder "pic_result" which including some intermediate results. The final reulst will be named as "result". 
 
-
+ <br>
+ <br>
 
 
 ### Reference
